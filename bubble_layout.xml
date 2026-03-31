@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/bubble_layout.xml -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- Main Bubble Button -->
+    <LinearLayout
+        android:id="@+id/bubbleMain"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bubble_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌐"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <!-- Small X Close Button -->
+    <TextView
+        android:id="@+id/btnBubbleClose"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/close_btn_bg"
+        android:gravity="center"
+        android:text="✕"
+        android:textColor="#FFFFFF"
+        android:textSize="9sp" />
+
+</FrameLayout>

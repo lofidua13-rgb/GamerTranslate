@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="#E6101820" android:orientation="vertical"
+    android:padding="12dp" android:elevation="16dp">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="6dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="⚡ GAMER TRANSLATE"
+            android:textColor="#00FF88" android:textSize="13sp" android:textStyle="bold"/>
+        <Button android:id="@+id/btnClose" android:layout_width="wrap_content"
+            android:layout_height="30dp" android:background="@android:color/transparent"
+            android:text="✕" android:textColor="#888888" android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- AI Provider Spinner -->
+    <Spinner android:id="@+id/spinnerAIProvider" android:layout_width="match_parent"
+        android:layout_height="36dp" android:background="#1A2530" android:layout_marginBottom="6dp"/>
+
+    <!-- Mode Indicator -->
+    <TextView android:id="@+id/tvTranslateMode"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="🔄 Auto-detect: Hinglish ↔ English"
+        android:textColor="#00AA55" android:textSize="11sp" android:gravity="center"
+        android:background="#0D2218" android:padding="4dp"
+        android:layout_marginBottom="8dp" android:visibility="visible"/>
+
+    <!-- Input -->
+    <EditText android:id="@+id/etInput" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:minHeight="60dp"
+        android:background="@drawable/input_bg" android:hint="Hinglish ya English likho..."
+        android:hintTextColor="#555555" android:imeOptions="actionDone"
+        android:inputType="textMultiLine|textCapSentences" android:maxLines="3"
+        android:padding="10dp" android:textColor="#E0E0E0" android:textSize="14sp"
+        android:layout_marginBottom="6dp"/>
+
+    <!-- Buttons -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:paddingBottom="8dp">
+        <Button android:id="@+id/btnPaste" android:layout_width="0dp" android:layout_height="38dp"
+            android:layout_weight="1" android:layout_marginEnd="6dp"
+            android:background="@drawable/outline_btn_bg" android:text="📋 PASTE"
+            android:textColor="#AAAAAA" android:textSize="11sp" android:textStyle="bold"/>
+        <Button android:id="@+id/btnTranslate" android:layout_width="0dp" android:layout_height="38dp"
+            android:layout_weight="2" android:background="@drawable/translate_btn_bg"
+            android:text="⚡ TRANSLATE" android:textColor="#000000"
+            android:textSize="12sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Progress -->
+    <ProgressBar android:id="@+id/progressBar" style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent" android:layout_height="4dp"
+        android:indeterminate="true" android:progressTint="#00FF88"
+        android:visibility="gone" android:layout_marginBottom="6dp"/>
+
+    <!-- Output -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/output_bg" android:orientation="vertical" android:padding="10dp">
+        <TextView android:id="@+id/tvOutput" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="44dp"
+            android:text="Translation will appear here..." android:textColor="#00FF88"
+            android:textSize="15sp" android:textStyle="bold"/>
+        <Button android:id="@+id/btnCopy" android:layout_width="wrap_content"
+            android:layout_height="28dp" android:layout_gravity="end" android:layout_marginTop="4dp"
+            android:background="@drawable/outline_btn_bg" android:paddingHorizontal="12dp"
+            android:text="COPY ✓" android:textColor="#00FF88" android:textSize="10sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>

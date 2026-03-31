@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/colors.xml -->
+<resources>
+    <color name="green">#00FF88</color>
+    <color name="red">#FF4455</color>
+    <color name="orange">#FFA500</color>
+    <color name="bg_dark">#0F1923</color>
+    <color name="bg_card">#1A2530</color>
+    <color name="accent">#00FF88</color>
+    <color name="text_primary">#E0E0E0</color>
+    <color name="text_secondary">#888888</color>
+</resources>

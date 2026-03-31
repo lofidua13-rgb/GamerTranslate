@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1923">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:paddingTop="24dp" android:paddingBottom="4dp"
+            android:text="🌐" android:textSize="48sp" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:text="GAMER TRANSLATE" android:textColor="#00FF88"
+            android:textSize="22sp" android:textStyle="bold" android:letterSpacing="0.2"
+            android:paddingBottom="4dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:text="Floating AI translator for gamers"
+            android:textColor="#666666" android:textSize="12sp" android:paddingBottom="28dp"/>
+
+        <!-- PERMISSIONS -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="PERMISSIONS" android:textColor="#444444" android:textSize="11sp"
+            android:letterSpacing="0.2" android:paddingBottom="8dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="#1A2530" android:orientation="vertical" android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:id="@+id/tvOverlayStatus" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="⏳ Overlay: Checking..."
+                android:textColor="#AAAAAA" android:textSize="13sp" android:paddingBottom="8dp"/>
+
+            <Button android:id="@+id/btnOverlayPerm" android:layout_width="match_parent"
+                android:layout_height="40dp" android:background="#1E3A2A"
+                android:text="GRANT OVERLAY PERMISSION" android:textColor="#00FF88"
+                android:textSize="12sp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:id="@+id/tvAccessibilityStatus" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="⏳ Accessibility: Checking..."
+                android:textColor="#AAAAAA" android:textSize="13sp" android:paddingBottom="8dp"/>
+
+            <Button android:id="@+id/btnAccessibilityPerm" android:layout_width="match_parent"
+                android:layout_height="40dp" android:background="#1E3A2A"
+                android:text="ENABLE AUTO TEXT CAPTURE" android:textColor="#00CC77"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- SETTINGS -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="SETTINGS" android:textColor="#444444" android:textSize="11sp"
+            android:letterSpacing="0.2" android:paddingBottom="8dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="#1A2530" android:orientation="vertical" android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="FROM LANGUAGE" android:textColor="#666666" android:textSize="10sp"
+                android:paddingBottom="4dp"/>
+            <Spinner android:id="@+id/spinnerFrom" android:layout_width="match_parent"
+                android:layout_height="44dp" android:background="#0F1923" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="TO LANGUAGE" android:textColor="#666666" android:textSize="10sp"
+                android:paddingBottom="4dp"/>
+            <Spinner android:id="@+id/spinnerTo" android:layout_width="match_parent"
+                android:layout_height="44dp" android:background="#0F1923" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="AI PROVIDER" android:textColor="#666666" android:textSize="10sp"
+                android:paddingBottom="4dp"/>
+            <Spinner android:id="@+id/spinnerAIProvider" android:layout_width="match_parent"
+                android:layout_height="44dp" android:background="#0F1923" android:layout_marginBottom="12dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Auto-translate selected text"
+                    android:textColor="#AAAAAA" android:textSize="13sp"/>
+                <Switch android:id="@+id/switchAutoTranslate" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:checked="true"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- API KEYS -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="AI API KEYS" android:textColor="#444444" android:textSize="11sp"
+            android:letterSpacing="0.2" android:paddingBottom="8dp"/>
+
+        <LinearLayout android:id="@+id/layoutApiKeys" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:background="#1A2530"
+            android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Gemini API Key (Free)" android:textColor="#666666"
+                android:textSize="10sp" android:paddingBottom="4dp"/>
+            <EditText android:id="@+id/etGeminiKey" android:layout_width="match_parent"
+                android:layout_height="44dp" android:background="#0F1923"
+                android:hint="AIza..." android:hintTextColor="#444444"
+                android:inputType="textPassword" android:textColor="#E0E0E0"
+                android:textSize="13sp" android:padding="8dp" android:layout_marginBottom="10dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="OpenAI API Key (ChatGPT)" android:textColor="#666666"
+                android:textSize="10sp" android:paddingBottom="4dp"/>
+            <EditText android:id="@+id/etOpenAIKey" android:layout_width="match_parent"
+                android:layout_height="44dp" android:background="#0F1923"
+                android:hint="sk-..." android:hintTextColor="#444444"
+                android:inputType="textPassword" android:textColor="#E0E0E0"
+                android:textSize="13sp" android:padding="8dp" android:layout_marginBottom="10dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Claude API Key (Anthropic)" android:textColor="#666666"
+                android:textSize="10sp" android:paddingBottom="4dp"/>
+            <EditText android:id="@+id/etClaudeKey" android:layout_width="match_parent"
+                android:layout_height="44dp" android:background="#0F1923"
+                android:hint="sk-ant-..." android:hintTextColor="#444444"
+                android:inputType="textPassword" android:textColor="#E0E0E0"
+                android:textSize="13sp" android:padding="8dp" android:layout_marginBottom="10dp"/>
+
+            <Button android:id="@+id/btnSaveKeys" android:layout_width="match_parent"
+                android:layout_height="44dp" android:background="#00FF88"
+                android:text="💾 SAVE API KEYS" android:textColor="#000000"
+                android:textSize="13sp" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- START/STOP -->
+        <Button android:id="@+id/btnStartService" android:layout_width="match_parent"
+            android:layout_height="52dp" android:background="#00FF88"
+            android:text="▶  START FLOATING BUBBLE" android:textColor="#000000"
+            android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+
+        <Button android:id="@+id/btnStopService" android:layout_width="match_parent"
+            android:layout_height="44dp" android:background="#1A2530"
+            android:text="■  STOP SERVICE" android:textColor="#666666"
+            android:textSize="13sp" android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

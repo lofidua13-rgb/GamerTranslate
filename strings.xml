@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/strings.xml -->
+<resources>
+    <string name="app_name">GamerTranslate</string>
+    <string name="accessibility_service_label">GamerTranslate Auto-Capture</string>
+    <string name="accessibility_description">Automatically captures selected text from any app for instant translation. No data is stored or shared.</string>
+</resources>
